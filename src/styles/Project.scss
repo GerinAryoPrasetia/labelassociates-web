@@ -6,7 +6,7 @@ table {
 }
 
 .container-projects {
-    width: 100v;
+    width: $width;
     height: 100vh;
     display: flex;
     flex-direction: column-reverse;

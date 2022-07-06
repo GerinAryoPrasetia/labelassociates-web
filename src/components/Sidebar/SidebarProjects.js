@@ -43,7 +43,7 @@ const SidebarProjects = () => {
     <div class={styles.side_container}>
       <div class={styles.side_content}>
         {/* <h1>LabelAssociates</h1> */}
-        <NavLink to="/commercial">
+        <NavLink to="/commercial" style={{ textDecoration: "none" }}>
           {({ isActive }) => (
             <div
               onMouseEnter={(e) => showSubMenuOne(e)}
@@ -58,12 +58,17 @@ const SidebarProjects = () => {
                 Commercial
               </p>
               <div className={displayOne ? styles.showing : styles.not_showing}>
-                <p>ASDFDAFFD</p>
+                <p>AN - House</p>
+                <p>BA - House</p>
+                <p>JD - House</p>
+                <p>PY - House</p>
+                <p>NL - Villa</p>
+                <p>NL - House</p>
               </div>
             </div>
           )}
         </NavLink>
-        <NavLink to="/residential">
+        <NavLink to="/residential" style={{ textDecoration: "none" }}>
           {({ isActive }) => (
             <div
               className={styles.item_container}
@@ -83,7 +88,7 @@ const SidebarProjects = () => {
             </div>
           )}
         </NavLink>
-        <NavLink to="/healthcare">
+        <NavLink to="/healthcare" style={{ textDecoration: "none" }}>
           {({ isActive }) => (
             <div class={styles.item_container}>
               <p
@@ -96,7 +101,7 @@ const SidebarProjects = () => {
             </div>
           )}
         </NavLink>
-        <NavLink to="/interior">
+        <NavLink to="/interior" style={{ textDecoration: "none" }}>
           {({ isActive }) => (
             <div class={styles.item_container}>
               <p

@@ -28,18 +28,22 @@
 .side_item {
     cursor: context-menu;
     margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .side_item:hover {
     /* transform: translateX(10px); */
     color: #B5A377;
     transition: all 0.2s ease-in;
+    text-decoration: none;
 }
 
 .side_item_active {
     transform: translate(10px, 0);
     color: #B5A377;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .not_showing {
@@ -49,4 +53,7 @@
 .showing {
     transform: translate(20px, 0);
     display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
 }
