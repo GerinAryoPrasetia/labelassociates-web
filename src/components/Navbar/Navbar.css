@@ -4,15 +4,17 @@
 }
 
 .nav {
-  height: 100px;
+  height: 70px;
   width: 100%;
   background-color: #fff;
-  position: relative;
+  position: fixed;
+  bottom: 0;
   align-items: center;
+  z-index: 999;
 }
 
 .nav a {
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 .nav > .nav-header {
@@ -27,7 +29,7 @@
 }
 
 .nav-links {
-  margin-left: 185px;
+  margin-left: 188px;
 }
 
 .nav > .nav-btn {
@@ -263,5 +265,20 @@
 
 
   .img-title {
-    width: 70px;
+    margin-left: 20px;
+    width: 50px;
+    transform: scale();
+    animation: scale 5s infinite 1s;
   }
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+
+

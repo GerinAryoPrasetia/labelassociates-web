@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { MENUITEMS } from "../data";
 import MenutItems from "./MenutItems";
 import { Link, NavLink } from "react-router-dom";
+import NavbarLogo from "../NavbarLogo";
 
 const Navbar = ({ type }) => {
   let activeStyle = {
@@ -13,11 +14,7 @@ const Navbar = ({ type }) => {
       <input type="checkbox" id="nav-check" />
       <div className="nav-header">
         <Link to="/">
-          <img
-            src="https://iili.io/jT7iT7.gif"
-            alt="logo-labelassociates"
-            className="img-title"
-          />
+          <NavbarLogo />
         </Link>
       </div>
       <div className="nav-btn">
@@ -32,25 +29,25 @@ const Navbar = ({ type }) => {
           to="/projects"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Projects
+          PROJECTS
         </NavLink>
         <NavLink
           to="/about"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          About
+          ABOUT
         </NavLink>
         <NavLink
           to="/contact"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Contact
+          CONTACT
         </NavLink>
         <NavLink
           to="/scope-of-work"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
-          Scope of Work
+          SCOPE OF WORK
         </NavLink>
       </div>
     </div>

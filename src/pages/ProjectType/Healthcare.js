@@ -10,9 +10,10 @@ import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarProjects from "../../components/Sidebar/SidebarProjects";
 import SliderCommercial from "../../components/Slider/SliderCommercial";
+import SliderHealthCare from "../../components/Slider/SliderHealthcare";
 import "../../styles/Project.scss";
 
-const Commercial = () => {
+const HealthCare = () => {
   let activeStyle = {
     fontWeight: "bold",
   };
@@ -39,7 +40,7 @@ const Commercial = () => {
       <Navbar />
       <div class="main-content-projects">
         <Sidebar />
-        <SliderCommercial />
+        <SliderHealthCare />
         {/* <div className="list-grid-wrapper">
           {LISTDATACOMMERCIAL.map((data, index) =>
             data.map((d, idx) => (
@@ -105,4 +106,4 @@ const Commercial = () => {
   );
 };
 
-export default Commercial;
+export default HealthCare;

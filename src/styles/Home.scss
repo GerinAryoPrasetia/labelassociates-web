@@ -17,6 +17,8 @@ $border: 0.5px solid #4A4949;
   flex-direction: column-reverse;
   width: 100vw;
   max-width: 100%;
+  overflow: hidden;
+
   //  height: $width / 2.118;
 }
 
@@ -32,13 +34,14 @@ $border: 0.5px solid #4A4949;
   width: 100%;
   height: 100%;
   flex: 1;
+  margin-bottom: 70px;
   
   grid-template-columns: 61.8% 9.02% 5.58% 23.6%;
   grid-template-rows: 61.8% 9.02% 5.58% 23.6%;
   grid-template-areas: 
     "A B B B"
-    "A E E C"
-    "A E E C"
+    "A D D C"
+    "A D D C"
     "A D D C";  
 }
 
@@ -52,45 +55,79 @@ $border: 0.5px solid #4A4949;
   
   color: #F2F2F2;
   font-size: 1.5em;
-  font-weight: 700;
-  text-shadow: 1px 1px 1px #878787;
+  // font-weight: 700;
+  // text-shadow: 1px 1px 1px #878787;
   box-sizing: border-box;
   overflow: hidden;
 //   border: $border;
   
   &.a {
     grid-area: A;
-    background-color: rgb(38, 38, 38);
-    
+    background: url("https://iili.io/XycIeV.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+  /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
   }
   &.b {
     grid-area: B;
-    background-color: rgb(38, 38, 38);
+    
+    background: url("https://iili.io/hhVrMX.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+  /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
   }
   &.c {
     grid-area: C;
-    background-color: rgb(38, 38, 38);
+    background: url("https://iili.io/hhhq6F.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+  /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
   }
   &.d {
     grid-area: D;
-    background-color: rgb(38, 38, 38);
+    background: url("https://iili.io/jlRFmG.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+  /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
   }
   &.e {
     grid-area: E;
     font-size: 1.2em;
-    background-color: rgb(38, 38, 38);
+    background: url("https://iili.io/hhVrMX.jpg");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+  /*adjust s value for speed*/
+    animation: animatedBackground 500s linear infinite;
   }
 }
 
-.item img {
-  transform: scale(1.0);
-  transition: all 0.3s ease-out;
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: 10000px 0;
+  }
 }
 
-.item:hover img {
-  transform: scale(1.1);
-  opacity: 0.3;
-}
+// .item {
+//   transform: scale(1.0);
+//   transition: all 0.3s ease-out;
+// }
+
+// .item:hover  {
+//   opacity: 0.3;
+// }
 
 .fit-image {
   width: 100%;
@@ -102,39 +139,44 @@ $border: 0.5px solid #4A4949;
   opacity: 1;
 }
 
-.banner-content {
+.banner-content-home {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  display: flex;
+  top:0;
   width: 100%;
   padding: 15px;
-  text-align: center;
-  color: #fff;
-  
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  // background-color: #000;
 }
 
-.banner-content h3 {
+.banner-content-home:hover {
+  background-color:#ffffff77;
+  opacity: 1;
+}
+
+.banner-content-home h3 {
   transform: translateY(30px);
   opacity: 0;
   transition: all 0.3s ease-out;
+
 }
 
-.banner-content p {
-  transform: translateY(30px);
-  opacity: 0;
-  transition: all 0.3s ease-out 0.2s;
-}
 
-.item:hover .banner-content h3 {
-  transform: translateY(0);
-  opacity: 1;
-  font-size: 18px;
-}
-
-.item:hover .banner-content p {
+.item:hover .banner-content-home h3 {
   transform: translateY(0);
   opacity: 1;
   font-size: 14px;
+  font-weight: bold;
+  color: #000;
 }
 
-
+.item:hover .banner-content-home p {
+  transform: translateY(0);
+  opacity: 1;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}

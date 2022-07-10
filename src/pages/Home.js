@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import "../styles/Home.scss";
 import { BUILDINGDATAHOMEPAGE } from "../components/data";
-import { MutatingDots } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
+import Loading from "../components/Loading";
 
 const Home = () => {
+  let navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -12,75 +15,63 @@ const Home = () => {
     }, 700);
   }, []);
 
+  const navigateHome = (id) => {
+    navigate(`/project/${id}`);
+  };
+
   if (isLoading) {
     return (
       <div className="loading-container">
-        <MutatingDots
-          color="#B5A377"
-          secondaryColor="#B5A377"
-          height={180}
-          width={180}
-        />
+        <Loading />
       </div>
     );
   }
   return (
     <div className="container-home">
       <Navbar />
+
       <div className="grid-wrapper">
-        <div className="item a">
-          <img
-            className="fit-image"
-            src={BUILDINGDATAHOMEPAGE[0].image_url[0]}
-            alt="an-house-labelassociates"
-          />
-          <div class="banner-content">
-            <h3>{BUILDINGDATAHOMEPAGE[0].name}</h3>
-            <p>{BUILDINGDATAHOMEPAGE[0].type}</p>
+        <div
+          className="item a"
+          onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[1].id)}
+        >
+          <div className="banner-content-home">
+            <h3>
+              {BUILDINGDATAHOMEPAGE[1].name} - {BUILDINGDATAHOMEPAGE[1].type}
+            </h3>
+            <p></p>
           </div>
         </div>
-        <div className="item b">
-          <img
-            className="fit-image"
-            src={BUILDINGDATAHOMEPAGE[1].image_url}
-            alt="ba-house-labelassociates"
-          />
-          <div class="banner-content">
-            <h3>{BUILDINGDATAHOMEPAGE[1].name}</h3>
-            <p>{BUILDINGDATAHOMEPAGE[1].type}</p>
+        <div
+          className="item b"
+          onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[0].id)}
+        >
+          <div className="banner-content-home">
+            <h3>
+              {BUILDINGDATAHOMEPAGE[0].name} - {BUILDINGDATAHOMEPAGE[0].type}
+            </h3>
+            <p></p>
           </div>
         </div>
-        <div className="item d">
-          <img
-            className="fit-image"
-            src={BUILDINGDATAHOMEPAGE[2].image_url}
-            alt="an-house-labelassociates"
-          />
-          <div class="banner-content">
-            <h3>{BUILDINGDATAHOMEPAGE[2].name}</h3>
-            <p>{BUILDINGDATAHOMEPAGE[2].type}</p>
+        <div
+          className="item d"
+          onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[2].id)}
+        >
+          <div className="banner-content-home">
+            <h3>
+              {BUILDINGDATAHOMEPAGE[2].name} - {BUILDINGDATAHOMEPAGE[2].type}
+            </h3>
+            <p></p>
           </div>
         </div>
-        <div className="item c">
-          <img
-            className="fit-image"
-            src={BUILDINGDATAHOMEPAGE[3].image_url}
-            alt="td-bakehouse-labelassociates"
-          />
-          <div class="banner-content">
-            <h3>{BUILDINGDATAHOMEPAGE[3].name}</h3>
-            <p>{BUILDINGDATAHOMEPAGE[3].type}</p>
-          </div>
-        </div>
-        <div className="item e">
-          <img
-            className="fit-image"
-            src={BUILDINGDATAHOMEPAGE[4].image_url}
-            alt="kj-clinic-labelassociates"
-          />
-          <div class="banner-content">
-            <h3>{BUILDINGDATAHOMEPAGE[4].name}</h3>
-            <p>{BUILDINGDATAHOMEPAGE[4].type}</p>
+        <div
+          className="item c"
+          onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[3].id)}
+        >
+          <div className="banner-content-home">
+            <h3>
+              {BUILDINGDATAHOMEPAGE[3].name} - {BUILDINGDATAHOMEPAGE[3].type}
+            </h3>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ import {
 } from "../data";
 import styles from "./SidebarProjects.module.css";
 
-const SidebarProjects = ({ name, collab, type, loc, status, area }) => {
+const Sidebar = ({ name, collab, type, loc, status, area }) => {
   console.log(name);
 
   const [displayOne, setDisplayOne] = useState(false);
@@ -59,39 +59,6 @@ const SidebarProjects = ({ name, collab, type, loc, status, area }) => {
   return (
     <>
       <div className={styles.side_container}>
-        <div
-          className={
-            displayContent
-              ? styles.detail_container
-              : styles.detail_container_hidden
-          }
-        >
-          <p>
-            <span style={{ fontStyle: "italic" }}> Project's Name</span>
-          </p>
-          <p className={styles.detail_content}>{name}</p>
-          <p>
-            <span style={{ fontStyle: "italic" }}> In Colaboration With</span>
-          </p>
-          <p className={styles.detail_content}>{collab}</p>
-          <p>
-            <span style={{ fontStyle: "italic" }}> Type</span>
-          </p>
-          <p className={styles.detail_content}>{type}</p>
-          <p>
-            <span style={{ fontStyle: "italic" }}> Area</span>
-          </p>
-          <p className={styles.detail_content}>{area}</p>
-          <p>
-            <span style={{ fontStyle: "italic" }}> Location</span>
-          </p>
-          <p className={styles.detail_content}>{loc}</p>
-          <p>
-            <span style={{ fontStyle: "italic" }}> Status</span>
-          </p>
-          <p className={styles.detail_content}>{status}</p>
-          {/* <div className={styles.fake_shadow}></div> */}
-        </div>
         <div class={styles.side_content}>
           {/* <h1>LabelAssociates</h1> */}
           {/* {data.name} */}
@@ -205,4 +172,4 @@ const SidebarProjects = ({ name, collab, type, loc, status, area }) => {
   );
 };
 
-export default SidebarProjects;
+export default Sidebar;
