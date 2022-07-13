@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 import { Oval } from "react-loader-spinner";
 import Loading from "./Loading";
 
+import { FaInstagram, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
+
 const ContactForm = () => {
   const form = useRef();
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -81,6 +83,20 @@ const ContactForm = () => {
               )}
             </NavLink>
           </div>
+          <div className={styles.contact_container}>
+            <div className={styles.contact_content}>
+              <FaPhoneAlt />
+              <span>082116309849(M.Iza Wildan)</span>
+            </div>
+            <div className={styles.contact_content}>
+              <FaInstagram />
+              <span>@label.associates</span>
+            </div>
+            <div className={styles.contact_content}>
+              <FaRegEnvelope />
+              <span>label.assoc@gmail.com</span>
+            </div>
+          </div>
         </div>
         {/* Content */}
         <form ref={form} onSubmit={sendEmail}>
@@ -131,6 +147,7 @@ const ContactForm = () => {
                 <select name="type">
                   <option value="Rumah">Rumah</option>
                   <option value="Interior">Interior</option>
+                  <option value="Commercial">Commercial</option>
                 </select>
               </div>
               <div className={styles.form_wrapper}>

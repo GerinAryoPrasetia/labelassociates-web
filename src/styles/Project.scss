@@ -196,6 +196,7 @@ table {
     &.item-1 {
       grid-area: A;
       background-color: #fff;
+      // background-color: aqua;
       
     }
     &.item-2 {
@@ -248,6 +249,10 @@ table {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  
+  .fit-image-type:hover {
+    opacity: 0.5;
   }
   
   .fit-image:hover {
@@ -303,7 +308,7 @@ table {
     padding: 15px;
     text-align: center;
     color: #fff;
-  
+    
   }
   
   .banner-content-slider h3 {
@@ -321,7 +326,8 @@ table {
     font-size: 14px;
     color: #000;
   }
-  
+
+
   .item-project-type-slider:hover .banner-content-slider h3 {
     transform: translateY(0);
     opacity: 1;
@@ -443,4 +449,171 @@ table {
   height: 80px !important
 }
 
+.image-gallery-thumbnail .image-gallery-thumbnail-inner {
+  width: fit-content !important;
+ 
+}
 
+.image-gallery-thumbnail + .image-gallery-thumbnail {
+  width: fit-content !important;
+}
+
+
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:focus {
+  width: fit-content !important;
+}
+
+
+
+.image-gallery-thumbnail {
+  width: fit-content !important;
+}
+// ABOUT
+
+.item-about img {
+  transform: scale(1.0);
+  transition: all 0.3s ease-out;
+  opacity: 0.4;
+}
+
+.item-about:hover img {
+  transform: scale(1.1);
+  opacity: 0.15;
+}
+
+.banner-content-about {
+  position: absolute;
+  // left: 0;
+  top: 50%;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  
+}
+
+.banner-content-about h3 {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.banner-content-about p {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.5s ease-out 0.1s;
+  font-size: 14px;
+  color: #000;
+}
+
+.item-about:hover .banner-content-about {
+  top: 50px;
+  transition: all 0.5s ease-out 0.2s;
+}
+
+.item-about:hover .banner-content-about h3 {
+  // transform: translateY(0)
+  opacity: 1;
+  font-size: 14px;
+  color: #000;
+}
+
+.item-about:hover .banner-content-about p {
+  transform: translateY(0);
+  opacity: 1;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+}
+
+.banner-content-about-secondary {
+  position: absolute;
+  // left: 0;
+  top: 50%;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  
+}
+
+.banner-content-about-secondary h3 {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: all 0.1s ease-out;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.banner-content-about-secondary p {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.5s ease-out 0.1s;
+  font-size: 14px;
+  color: #000;
+}
+
+.item-about:hover .banner-content-about-secondary {
+  top: 40%;
+  transition: all 0.3s ease-out 0.2s;
+}
+
+.item-about:hover .banner-content-about-secondary h3 {
+  // transform: translateY(0)
+  opacity: 1;
+  font-size: 14px;
+  color: #000;
+}
+
+.item-about:hover .banner-content-about-secondary p {
+  transform: translateY(0);
+  opacity: 1;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+}
+
+
+.item-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+  color: #F2F2F2;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #878787;
+  box-sizing: border-box;
+  overflow: hidden;
+//   border: $border;
+  
+  &.a {
+    grid-area: A;
+    background-color: #fff;
+    
+  }
+  &.b {
+    grid-area: B;
+    background-color: #fff;
+  }
+  &.c {
+    grid-area: C;
+    background-color: #fff;
+  }
+  &.d {
+    grid-area: D;
+    background-color: #fff;
+  }
+  &.e {
+    grid-area: E;
+    font-size: 1.2em;
+    background-color: #fff;
+  }
+}

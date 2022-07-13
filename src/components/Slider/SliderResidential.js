@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const SliderResidential = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideLength = LISTDATACOMMERCIAL.length;
+  const slideLength = LISTDATARESIDENTIAL.length;
   const [hideArrow, setHideArrow] = useState(true);
 
   const autoScroll = true;

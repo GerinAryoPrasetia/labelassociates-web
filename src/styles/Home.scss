@@ -63,12 +63,12 @@ $border: 0.5px solid #4A4949;
   
   &.a {
     grid-area: A;
-    background: url("https://iili.io/XycIeV.jpg");
+    background: url("https://iili.io/wl35PI.jpg");
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
   /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
+    animation: animatedBackground 300s linear infinite;
   }
   &.b {
     grid-area: B;
@@ -78,7 +78,7 @@ $border: 0.5px solid #4A4949;
     background-position: 0 0;
     background-size: auto 100%;
   /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
+    animation: animatedBackground 300s linear infinite;
   }
   &.c {
     grid-area: C;
@@ -87,7 +87,7 @@ $border: 0.5px solid #4A4949;
     background-position: 0 0;
     background-size: auto 100%;
   /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
+    animation: animatedBackground 300s linear infinite;
   }
   &.d {
     grid-area: D;
@@ -96,7 +96,7 @@ $border: 0.5px solid #4A4949;
     background-position: 0 0;
     background-size: auto 100%;
   /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
+    animation: animatedBackground 300s linear infinite;
   }
   &.e {
     grid-area: E;
@@ -106,7 +106,7 @@ $border: 0.5px solid #4A4949;
     background-position: 0 0;
     background-size: auto 100%;
   /*adjust s value for speed*/
-    animation: animatedBackground 500s linear infinite;
+    animation: animatedBackground 300s linear infinite;
   }
 }
 

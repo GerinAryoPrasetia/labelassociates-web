@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "../../styles/SliderCommercial.scss";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { BUILDINGDATA, LISTDATACOMMERCIAL, LISTDATAHEALTH } from "../data";
+import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const SliderHealthCare = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideLength = LISTDATACOMMERCIAL.length;
+  const slideLength = LISTDATAHEALTH.length;
 
   const autoScroll = true;
   let slideInterval;
@@ -39,8 +40,8 @@ const SliderHealthCare = () => {
 
   return (
     <div className="slider">
-      <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-      <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+      <FaAngleLeft className={"arrow prev"} onClick={prevSlide} />
+      <FaAngleRight className={"arrow next"} onClick={nextSlide} />
       {LISTDATAHEALTH.map((container, index) => (
         <div
           className={index === currentSlide ? "slide current" : "slide"}

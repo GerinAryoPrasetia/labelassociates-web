@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import SidebarProjects from "../../components/Sidebar/SidebarProjects";
 import SliderCommercial from "../../components/Slider/SliderCommercial";
+
 import "../../styles/Project.scss";
 
 const Commercial = () => {
@@ -40,6 +41,7 @@ const Commercial = () => {
       <div class="main-content-projects">
         <Sidebar />
         <SliderCommercial />
+        {/* <Slieder2 /> */}
         {/* <div className="list-grid-wrapper">
           {LISTDATACOMMERCIAL.map((data, index) =>
             data.map((d, idx) => (

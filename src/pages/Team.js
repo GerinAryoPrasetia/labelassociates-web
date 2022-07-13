@@ -158,7 +158,19 @@ const Team = () => {
                   isActiveThree ? styles.side_item_active : styles.side_item
                 }
               >
-                Meet The Team
+                Gallery
+              </p>
+            </div>
+            <div
+              className={styles.item_container}
+              onClick={() => sideClickedThree()}
+            >
+              <p
+                className={
+                  isActiveThree ? styles.side_item_active : styles.side_item
+                }
+              >
+                Team
               </p>
             </div>
           </div>
@@ -188,8 +200,8 @@ const Team = () => {
               ))}
             </div>
             <ul>
-              <li>Head Architect - Ludowikus Panduhadi Pangestu S.Ars.</li>
-              <li>Lulusan Arsitek UNPAR</li>
+              <li>Head Architect | Ludowikus Panduhadi Pangestu S.Ars.</li>
+              <li>Bachelor of Architecture UNPAR</li>
               <li>Focus on Design Architecture</li>
               <li>Interest : Exploring Architecture Building</li>
             </ul>
@@ -224,7 +236,7 @@ const Team = () => {
               <li>
                 General Manager | Architect - Fariz Ikhsansyah S.Ars, IAI.
               </li>
-              <li>Lulusan Arsitek UNPAR</li>
+              <li>Bachelor of Architecture UNPAR</li>
               <li>Focus on Architectural Technical and details</li>
               <li>Interest : Technology</li>
             </ul>
@@ -257,7 +269,7 @@ const Team = () => {
             </div>
             <ul>
               <li>Head Operation | Architect - M Iza Wildan S.Ars</li>
-              <li>Lulusan Arsitek UNPAR</li>
+              <li>Bachelor of Architecture UNPAR</li>
               <li>Focus on business development</li>
               <li>Interest : Tennis & Bonsai</li>
             </ul>

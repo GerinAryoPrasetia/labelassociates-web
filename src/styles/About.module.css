@@ -12,6 +12,20 @@
   /* background-color: rebeccapurple; */
 }
 
+.container_work {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  /* margin-bottom: 70px; */
+  /* //  height: $width / 2.118; */ 
+  /* margin-bottom: 70px; */
+  /* background-color: rebeccapurple; */
+}
+
 .content_about {
   width: 50%;
 }

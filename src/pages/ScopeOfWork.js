@@ -95,7 +95,7 @@ const ScopeOfWork = () => {
   };
 
   return (
-    <div className={styles.container_about}>
+    <div className={styles.container_work}>
       <Navbar />
       <div className={styles.main_content_about}>
         <div class={styles.side_container}>
@@ -141,8 +141,14 @@ const ScopeOfWork = () => {
                 workFlowClicked ? "slider-work work-hidden" : "slider-work"
               }
             >
-              <AiOutlineArrowLeft className="arrow prev" onClick={prevSlide} />
-              <AiOutlineArrowRight className="arrow next" onClick={nextSlide} />
+              <AiOutlineArrowLeft
+                className="arrow_work prev_work"
+                onClick={prevSlide}
+              />
+              <AiOutlineArrowRight
+                className="arrow_work next_work"
+                onClick={nextSlide}
+              />
               {LISTTYPEWORK.map((container, index) => (
                 <div
                   className={
@@ -181,11 +187,11 @@ const ScopeOfWork = () => {
               }
             >
               <AiOutlineArrowLeft
-                className="arrow prev"
+                className="arrow_work prev_work"
                 onClick={prevSlideTwo}
               />
               <AiOutlineArrowRight
-                className="arrow next"
+                className="arrow_work next_work"
                 onClick={nextSlideTwo}
               />
               {LISTWORKFLOW.map((container, index) => (

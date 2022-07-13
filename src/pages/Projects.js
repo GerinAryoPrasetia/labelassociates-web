@@ -77,8 +77,8 @@ const Projects = () => {
                 <div className="item-project-type c">
                   <img
                     className="fit-image"
-                    src="https://iili.io/jlRFmG.jpg"
-                    alt="fa-bedroom-labelassociates"
+                    src="https://iili.io/w1NTI2.png"
+                    alt="ba-bedroom-labelassociates"
                   />
                   <div class="banner-content">
                     <h3>Interior</h3>

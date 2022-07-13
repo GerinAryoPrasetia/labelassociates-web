@@ -268,16 +268,17 @@
     margin-left: 20px;
     width: 50px;
     transform: scale();
-    animation: scale 5s infinite 1s;
+    animation: scale 5s ease-in-out infinite;
   }
 
 @keyframes scale {
-    0% {
+    0%, 100% {
         transform: scale(1);
     }
-    100%{
+    50%{
         transform: scale(1.2);
     }
+
 }
 
 

@@ -8,6 +8,12 @@ import Map, { Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Oval } from "react-loader-spinner";
 import Loading from "../components/Loading";
+import { FaInstagram, FaPhoneAlt, FaRegEnvelope } from "react-icons/fa";
+import { CgMail } from "react-icons/cg";
+
+mapboxgl.workerClass =
+  // eslint-disable-next-line import/no-webpack-loader-syntax
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZ2VyaW5hcnlvIiwiYSI6ImNsNTlzeHV1MDAyb2EzZW8xMmVzbHVuem4ifQ.Uz7f43R-FFlsXt_vxgdGwg";
@@ -87,6 +93,23 @@ const Contact = () => {
                 </div>
               )}
             </NavLink>
+          </div>
+          <div
+            className={styles.contact_container}
+            style={{ marginTop: "50px" }}
+          >
+            <div className={styles.contact_content}>
+              <FaPhoneAlt />
+              <span>(022) 20515404</span>
+            </div>
+            <div className={styles.contact_content}>
+              <FaInstagram />
+              <span>@label.associates</span>
+            </div>
+            <div className={styles.contact_content}>
+              <FaRegEnvelope />
+              <span>label.assoc@gmail.com</span>
+            </div>
           </div>
         </div>
         {/* Content */}
