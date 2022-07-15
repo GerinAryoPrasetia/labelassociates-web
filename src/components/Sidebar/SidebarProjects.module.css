@@ -114,3 +114,11 @@ background: -moz-linear-gradient(182deg,#fbfbfb 0%, #ececec 100%);
 height: 300px;
 width: 100%;
 }
+
+
+@media only screen and (max-device-width: 480px) {
+    .side_container {
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+}

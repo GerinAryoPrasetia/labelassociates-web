@@ -31,66 +31,129 @@ const Projects = () => {
     );
   }
   return (
-    <div className="container-projects">
-      <div class="main-content-projects">
-        <Sidebar />
-        <div className="slider">
-          <div className="slide-project current">
-            <div className="list-grid-wrapper-slider">
-              <Link to={"/commercial"}>
-                <div className="item-project-type a">
-                  <img
-                    className="fit-image"
-                    src="https://iili.io/hhjXbR.jpg"
-                    alt="muaro-jambi-labelassociates"
-                  />
-                  <div class="banner-content">
-                    <h3>Commercial</h3>
+    <>
+      <div className="container-projects">
+        <div class="main-content-projects">
+          <Sidebar />
+          <div className="slider">
+            <div className="slide-project current">
+              <div className="list-grid-wrapper-slider">
+                <Link to={"/commercial"}>
+                  <div className="item-project-type a">
+                    <img
+                      className="fit-image"
+                      src="https://iili.io/hhjXbR.jpg"
+                      alt="muaro-jambi-labelassociates"
+                    />
+                    <div class="banner-content">
+                      <h3>Commercial</h3>
+                    </div>
                   </div>
-                </div>
-              </Link>
-              <Link to={"/residential"}>
-                <div className="item-project-type b">
-                  <img
-                    className="fit-image"
-                    src="https://iili.io/hhVnaf.jpg"
-                    alt="py-house-labelassociates"
-                  />
-                  <div class="banner-content">
-                    <h3>Residential</h3>
+                </Link>
+                <Link to={"/residential"}>
+                  <div className="item-project-type b">
+                    <img
+                      className="fit-image"
+                      src="https://iili.io/hhVnaf.jpg"
+                      alt="py-house-labelassociates"
+                    />
+                    <div class="banner-content">
+                      <h3>Residential</h3>
+                    </div>
                   </div>
-                </div>
-              </Link>
-              <Link to={"/healthcare"}>
-                <div className="item-project-type d">
-                  <img
-                    className="fit-image"
-                    src="https://iili.io/hhwArX.jpg"
-                    alt="rsia-labelassociates"
-                  />
-                  <div class="banner-content">
-                    <h3>Healthcare</h3>
+                </Link>
+                <Link to={"/healthcare"}>
+                  <div className="item-project-type d">
+                    <img
+                      className="fit-image"
+                      src="https://iili.io/hhwArX.jpg"
+                      alt="rsia-labelassociates"
+                    />
+                    <div class="banner-content">
+                      <h3>Healthcare</h3>
+                    </div>
                   </div>
-                </div>
-              </Link>
-              <Link to={"/interior"}>
-                <div className="item-project-type c">
-                  <img
-                    className="fit-image"
-                    src="https://iili.io/w1NTI2.png"
-                    alt="ba-bedroom-labelassociates"
-                  />
-                  <div class="banner-content">
-                    <h3>Interior</h3>
+                </Link>
+                <Link to={"/interior"}>
+                  <div className="item-project-type c">
+                    <img
+                      className="fit-image"
+                      src="https://iili.io/w1NTI2.png"
+                      alt="ba-bedroom-labelassociates"
+                    />
+                    <div class="banner-content">
+                      <h3>Interior</h3>
+                    </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+        <Navbar type="main" />
       </div>
-      <Navbar type="main" />
-    </div>
+      {/* mobile */}
+      {/* <div className="container-projects-mobile">
+        <Navbar />
+        <div class="main-content-projects-mobile">
+          <Sidebar />
+          <div className="slider-mobile">
+            <div className="slide-project current-mobile">
+              <div className="list-grid-wrapper-slider-mobile">
+                <Link to={"/commercial"}>
+                  <div className="item-project-type-mobile a">
+                    <img
+                      className="fit-image-mobile"
+                      src="https://iili.io/hhjXbR.jpg"
+                      alt="muaro-jambi-labelassociates"
+                    />
+                    <div class="banner-content-mobile">
+                      <h3>Commercial</h3>
+                    </div>
+                  </div>
+                </Link>
+                <Link to={"/residential"}>
+                  <div className="item-project-type-mobile b">
+                    <img
+                      className="fit-image-mobile"
+                      src="https://iili.io/hhVnaf.jpg"
+                      alt="py-house-labelassociates"
+                    />
+                    <div class="banner-content-mobile">
+                      <h3>Residential</h3>
+                    </div>
+                  </div>
+                </Link>
+                <Link to={"/healthcare"}>
+                  <div className="item-project-type-mobile d">
+                    <img
+                      className="fit-image-mobile"
+                      src="https://iili.io/hhwArX.jpg"
+                      alt="rsia-labelassociates"
+                    />
+                    <div class="banner-content-mobile">
+                      <h3>Healthcare</h3>
+                    </div>
+                  </div>
+                </Link>
+                <Link to={"/interior"}>
+                  <div className="item-project-type-mobile c">
+                    <img
+                      className="fit-image-mobile"
+                      src="https://iili.io/w1NTI2.png"
+                      alt="ba-bedroom-labelassociates"
+                    />
+                    <div class="banner-content-mobile">
+                      <h3>Interior</h3>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+    </>
   );
 };
 

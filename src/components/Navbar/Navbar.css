@@ -278,8 +278,19 @@
     50%{
         transform: scale(1.2);
     }
-
 }
 
+.nav_mobile {
+  display: none;
+}
+
+/* MOBILE */
+@media only screen and (max-device-width: 480px) {
+  .nav {
+    position: fixed;
+    top: 0;
+  }
+  
+}
 
 

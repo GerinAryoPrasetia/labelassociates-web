@@ -617,3 +617,29 @@ table {
     background-color: #fff;
   }
 }
+
+// mobile
+
+@media only screen and (max-device-width: 480px) {
+  // .container-projects {
+  //   display: none;
+  // }
+  .container-projects {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .main-content-projects {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .list-grid-wrapper-slider {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+}

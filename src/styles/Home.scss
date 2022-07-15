@@ -180,3 +180,127 @@ $border: 0.5px solid #4A4949;
   font-weight: bold;
   color: #000;
 }
+
+.container-home-mobile {
+  display: none;
+}
+
+// MOBILE
+
+@media only screen and (max-device-width: 480px) {
+  .container-home {
+    display: none;
+  }
+
+  .container-home-mobile {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+
+
+
+  .grid-wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .item-mobile {
+    height: 600px;
+    position: relative;
+     &.a {
+      grid-area: A;
+      background: url("https://iili.io/wl35PI.jpg");
+      background-repeat: repeat;
+      background-position: 0 0;
+      background-size: auto 100%;
+    /*adjust s value for speed*/
+      animation: animatedBackground 300s linear infinite;
+     }
+     &.b {
+      grid-area: B;
+      
+      background: url("https://iili.io/hhVrMX.jpg");
+      background-repeat: repeat;
+      background-position: 0 0;
+      background-size: auto 100%;
+    /*adjust s value for speed*/
+      animation: animatedBackground 300s linear infinite;
+    }
+    &.c {
+      grid-area: C;
+      background: url("https://iili.io/hhhq6F.jpg");
+      background-repeat: repeat;
+      background-position: 0 0;
+      background-size: auto 100%;
+    /*adjust s value for speed*/
+      animation: animatedBackground 300s linear infinite;
+    }
+    &.d {
+      grid-area: D;
+      background: url("https://iili.io/jlRFmG.jpg");
+      background-repeat: repeat;
+      background-position: 0 0;
+      background-size: auto 100%;
+    /*adjust s value for speed*/
+      animation: animatedBackground 300s linear infinite;
+    }
+    &.e {
+      grid-area: E;
+      font-size: 1.2em;
+      background: url("https://iili.io/hhVrMX.jpg");
+      background-repeat: repeat;
+      background-position: 0 0;
+      background-size: auto 100%;
+    /*adjust s value for speed*/
+      animation: animatedBackground 300s linear infinite;
+    }
+  }
+
+
+  
+  .banner-content-home-mobile {
+    position: absolute;
+    display: flex;
+    top:0;
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  
+    height: 100%;
+    // background-color: #000;
+  }
+  
+  .banner-content-home-mobile:hover {
+    background-color:#ffffff77;
+    opacity: 1;
+  }
+  
+  .banner-content-home-mobile h3 {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+  
+  }
+  
+  
+  .item-mobile:hover .banner-content-home-mobile h3 {
+    transform: translateY(0);
+    opacity: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .item-mobile:hover .banner-content-home-mobile p {
+    transform: translateY(0);
+    opacity: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+  }
+}

@@ -82,6 +82,54 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div className="container-home-mobile">
+        <Navbar />
+        <div className="grid-wrapper-mobile">
+          <div
+            className="item-mobile a"
+            onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[1].id)}
+          >
+            <div className="banner-content-home-mobile">
+              <h3>
+                {BUILDINGDATAHOMEPAGE[1].name} - {BUILDINGDATAHOMEPAGE[1].type}
+              </h3>
+              <p></p>
+            </div>
+          </div>
+          <div
+            className="item-mobile b"
+            onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[0].id)}
+          >
+            <div className="banner-content-home-mobile">
+              <h3>
+                {BUILDINGDATAHOMEPAGE[0].name} - {BUILDINGDATAHOMEPAGE[0].type}
+              </h3>
+              <p></p>
+            </div>
+          </div>
+          <div
+            className="item-mobile d"
+            onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[2].id)}
+          >
+            <div className="banner-content-home-mobile">
+              <h3>
+                {BUILDINGDATAHOMEPAGE[2].name} - {BUILDINGDATAHOMEPAGE[2].type}
+              </h3>
+              <p></p>
+            </div>
+          </div>
+          <div
+            className="item-mobile c"
+            onClick={() => navigateHome(BUILDINGDATAHOMEPAGE[3].id)}
+          >
+            <div className="banner-content-home-mobile">
+              <h3>
+                {BUILDINGDATAHOMEPAGE[3].name} - {BUILDINGDATAHOMEPAGE[3].type}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
