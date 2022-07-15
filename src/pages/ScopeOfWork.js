@@ -3,16 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import SidebarAbout from "../components/Sidebar/SidebarAbout";
 import styles from "../styles/About.module.css";
+import styles2 from "../styles/Contact.module.css";
 import { Oval } from "react-loader-spinner";
 import Loading from "../components/Loading";
-import {
-  LISTDATACOMMERCIAL,
-  LISTIMGTEAMISAN,
-  LISTIMGTEAMIZA,
-  LISTIMGTEAMLUDO,
-  LISTTYPEWORK,
-  LISTWORKFLOW,
-} from "../components/data";
+import { LISTTYPEWORK, LISTWORKFLOW } from "../components/data";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import "../styles/SliderCommercial.scss";
 
@@ -24,12 +18,12 @@ const ScopeOfWork = () => {
   const [currentSlideTwo, setCurrentSlideTwo] = useState(0);
   const [typeWorkClicked, setTypeWorkClicked] = useState(false);
   const [workFlowClicked, setWorkFlowClicked] = useState(false);
+  const [overlayShowing, setOverlayShowing] = useState(true);
+  const [overlayShowingTwo, setOverlayShowingTwo] = useState(true);
 
   const slideLengthOne = LISTTYPEWORK.length;
   const slideLengthTwo = LISTWORKFLOW.length;
 
-  const autoScroll = true;
-  let slideInterval;
   let intervalTime = 5000;
 
   const nextSlide = () => {
@@ -56,21 +50,11 @@ const ScopeOfWork = () => {
     console.log("prev");
   };
 
-  function auto() {
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
-
   useEffect(() => {
     setCurrentSlide(0);
     setCurrentSlideTwo(0);
   }, []);
 
-  // useEffect(() => {
-  //   if (autoScroll) {
-  //     auto();
-  //   }
-  //   return () => clearInterval(slideInterval);
-  // }, [currentSlide]);
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
@@ -84,14 +68,33 @@ const ScopeOfWork = () => {
       </div>
     );
   }
+
+  const typeOfWorkClick = () => {
+    setTypeWorkClicked(!typeWorkClicked);
+  };
+
+  const workflowClick = () => {
+    setWorkFlowClicked(!workFlowClicked);
+  };
+
   const sideClickedOne = () => {
-    setIsActiveOne(!isActiveOne);
+    setIsActiveOne(true);
     setIsActiveTwo(false);
+    setOverlayShowing(false);
   };
 
   const sideClickedTwo = () => {
-    setIsActiveTwo(!isActiveTwo);
+    setIsActiveTwo(true);
     setIsActiveOne(false);
+    setOverlayShowingTwo(false);
+  };
+
+  const hideOverlay = () => {
+    setOverlayShowing(false);
+  };
+
+  const hideOverlayTwo = () => {
+    setOverlayShowingTwo(false);
   };
 
   return (
@@ -105,7 +108,6 @@ const ScopeOfWork = () => {
               className={styles.item_container}
               onClick={() => {
                 sideClickedOne();
-                setTypeWorkClicked(!typeWorkClicked);
               }}
             >
               <p
@@ -120,7 +122,6 @@ const ScopeOfWork = () => {
               className={styles.item_container}
               onClick={() => {
                 sideClickedTwo();
-                setWorkFlowClicked(!workFlowClicked);
               }}
             >
               <p
@@ -138,7 +139,17 @@ const ScopeOfWork = () => {
           <div className="container-work">
             <div
               className={
-                workFlowClicked ? "slider-work work-hidden" : "slider-work"
+                overlayShowing ? "overlay-work" : "overlay-work-hidden"
+              }
+              onClick={() => hideOverlay()}
+            >
+              <div className="overlay-work-content">
+                <p>Type of Work</p>
+              </div>
+            </div>
+            <div
+              className={
+                overlayShowing ? "slider-work work-hidden" : "slider-work "
               }
             >
               <AiOutlineArrowLeft
@@ -183,7 +194,17 @@ const ScopeOfWork = () => {
           <div className="container-work">
             <div
               className={
-                typeWorkClicked ? "slider-work work-hidden" : "slider-work"
+                overlayShowingTwo ? "overlay-work" : "overlay-work-hidden"
+              }
+              onClick={() => hideOverlayTwo()}
+            >
+              <div className="overlay-work-content">
+                <p>Work Flow</p>
+              </div>
+            </div>
+            <div
+              className={
+                overlayShowingTwo ? "slider-work  work-hidden " : "slider-work"
               }
             >
               <AiOutlineArrowLeft

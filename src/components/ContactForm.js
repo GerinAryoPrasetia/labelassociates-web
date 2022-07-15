@@ -86,7 +86,7 @@ const ContactForm = () => {
           <div className={styles.contact_container}>
             <div className={styles.contact_content}>
               <FaPhoneAlt />
-              <span>082116309849(M.Iza Wildan)</span>
+              <span>(022) 20515404</span>
             </div>
             <div className={styles.contact_content}>
               <FaInstagram />
