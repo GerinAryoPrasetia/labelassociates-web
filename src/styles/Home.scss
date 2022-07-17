@@ -1,6 +1,6 @@
 $width: 100vw;
 // $height: $width / 1.618;
-$border: 0.5px solid #4A4949;
+$border: 0.5px solid #4a4949;
 
 // body {
 //   height: 100vh;
@@ -23,11 +23,11 @@ $border: 0.5px solid #4A4949;
 }
 
 .grid-wrapper {
-//   min-width: 100%;
-//   min-height: 100%;
-//   height: auto !important;
-//   width: auto !important;
-//   border: $border;
+  //   min-width: 100%;
+  //   min-height: 100%;
+  //   height: auto !important;
+  //   width: auto !important;
+  //   border: $border;
   max-width: 100%;
   max-height: 100%;
   display: grid;
@@ -35,14 +35,14 @@ $border: 0.5px solid #4A4949;
   height: 100%;
   flex: 1;
   margin-bottom: 70px;
-  
+
   grid-template-columns: 61.8% 9.02% 5.58% 23.6%;
   grid-template-rows: 61.8% 9.02% 5.58% 23.6%;
-  grid-template-areas: 
+  grid-template-areas:
     "A B B B"
     "A D D C"
     "A D D C"
-    "A D D C";  
+    "A D D C";
 }
 
 .item {
@@ -52,32 +52,32 @@ $border: 0.5px solid #4A4949;
   height: 100%;
   width: 100%;
   position: relative;
-  
-  color: #F2F2F2;
+
+  color: #f2f2f2;
   font-size: 1.5em;
   // font-weight: 700;
   // text-shadow: 1px 1px 1px #878787;
   box-sizing: border-box;
   overflow: hidden;
-//   border: $border;
-  
+  //   border: $border;
+
   &.a {
     grid-area: A;
     background: url("https://iili.io/wl35PI.jpg");
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
-  /*adjust s value for speed*/
+    /*adjust s value for speed*/
     animation: animatedBackground 300s linear infinite;
   }
   &.b {
     grid-area: B;
-    
+
     background: url("https://iili.io/hhVrMX.jpg");
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
-  /*adjust s value for speed*/
+    /*adjust s value for speed*/
     animation: animatedBackground 300s linear infinite;
   }
   &.c {
@@ -86,7 +86,7 @@ $border: 0.5px solid #4A4949;
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
-  /*adjust s value for speed*/
+    /*adjust s value for speed*/
     animation: animatedBackground 300s linear infinite;
   }
   &.d {
@@ -95,7 +95,7 @@ $border: 0.5px solid #4A4949;
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
-  /*adjust s value for speed*/
+    /*adjust s value for speed*/
     animation: animatedBackground 300s linear infinite;
   }
   &.e {
@@ -105,7 +105,7 @@ $border: 0.5px solid #4A4949;
     background-repeat: repeat;
     background-position: 0 0;
     background-size: auto 100%;
-  /*adjust s value for speed*/
+    /*adjust s value for speed*/
     animation: animatedBackground 300s linear infinite;
   }
 }
@@ -114,7 +114,7 @@ $border: 0.5px solid #4A4949;
   from {
     background-position: 0 0;
   }
-/*use negative width if you want it to flow right to left else and positive for left to right*/
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
   to {
     background-position: 10000px 0;
   }
@@ -142,7 +142,7 @@ $border: 0.5px solid #4A4949;
 .banner-content-home {
   position: absolute;
   display: flex;
-  top:0;
+  top: 0;
   width: 100%;
   padding: 15px;
   align-items: center;
@@ -153,7 +153,7 @@ $border: 0.5px solid #4A4949;
 }
 
 .banner-content-home:hover {
-  background-color:#ffffff77;
+  background-color: #ffffff77;
   opacity: 1;
 }
 
@@ -161,9 +161,7 @@ $border: 0.5px solid #4A4949;
   transform: translateY(30px);
   opacity: 0;
   transition: all 0.3s ease-out;
-
 }
-
 
 .item:hover .banner-content-home h3 {
   transform: translateY(0);
@@ -187,7 +185,7 @@ $border: 0.5px solid #4A4949;
 
 // MOBILE
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 780px) {
   .container-home {
     display: none;
   }
@@ -199,8 +197,6 @@ $border: 0.5px solid #4A4949;
     width: 100vw;
   }
 
-
-
   .grid-wrapper-mobile {
     display: flex;
     flex-direction: column;
@@ -211,23 +207,23 @@ $border: 0.5px solid #4A4949;
   .item-mobile {
     height: 600px;
     position: relative;
-     &.a {
+    &.a {
       grid-area: A;
       background: url("https://iili.io/wl35PI.jpg");
       background-repeat: repeat;
       background-position: 0 0;
       background-size: auto 100%;
-    /*adjust s value for speed*/
+      /*adjust s value for speed*/
       animation: animatedBackground 300s linear infinite;
-     }
-     &.b {
+    }
+    &.b {
       grid-area: B;
-      
+
       background: url("https://iili.io/hhVrMX.jpg");
       background-repeat: repeat;
       background-position: 0 0;
       background-size: auto 100%;
-    /*adjust s value for speed*/
+      /*adjust s value for speed*/
       animation: animatedBackground 300s linear infinite;
     }
     &.c {
@@ -236,7 +232,7 @@ $border: 0.5px solid #4A4949;
       background-repeat: repeat;
       background-position: 0 0;
       background-size: auto 100%;
-    /*adjust s value for speed*/
+      /*adjust s value for speed*/
       animation: animatedBackground 300s linear infinite;
     }
     &.d {
@@ -245,7 +241,7 @@ $border: 0.5px solid #4A4949;
       background-repeat: repeat;
       background-position: 0 0;
       background-size: auto 100%;
-    /*adjust s value for speed*/
+      /*adjust s value for speed*/
       animation: animatedBackground 300s linear infinite;
     }
     &.e {
@@ -255,39 +251,35 @@ $border: 0.5px solid #4A4949;
       background-repeat: repeat;
       background-position: 0 0;
       background-size: auto 100%;
-    /*adjust s value for speed*/
+      /*adjust s value for speed*/
       animation: animatedBackground 300s linear infinite;
     }
   }
 
-
-  
   .banner-content-home-mobile {
     position: absolute;
     display: flex;
-    top:0;
+    top: 0;
     width: 100%;
     padding: 15px;
     align-items: center;
     justify-content: center;
-  
+
     height: 100%;
     // background-color: #000;
   }
-  
+
   .banner-content-home-mobile:hover {
-    background-color:#ffffff77;
+    background-color: #ffffff77;
     opacity: 1;
   }
-  
+
   .banner-content-home-mobile h3 {
     transform: translateY(30px);
     opacity: 0;
     transition: all 0.3s ease-out;
-  
   }
-  
-  
+
   .item-mobile:hover .banner-content-home-mobile h3 {
     transform: translateY(0);
     opacity: 1;
@@ -295,7 +287,7 @@ $border: 0.5px solid #4A4949;
     font-weight: bold;
     color: #000;
   }
-  
+
   .item-mobile:hover .banner-content-home-mobile p {
     transform: translateY(0);
     opacity: 1;

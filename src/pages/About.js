@@ -57,50 +57,54 @@ const About = () => {
           <div className="slider">
             <div className="slide-project current">
               <div className="list-grid-wrapper-slider">
-                <div className="item-about a">
-                  <img
-                    className="fit-image"
-                    src="https://iili.io/wlHEBt.jpg"
-                    alt="philosophy-labelassociates"
-                    // style={{ opacity: "0.7" }}
-                  />
-                  <div class="banner-content-about">
-                    <h3>PHILOSOPHY</h3>
-                    <p>
-                      We will do the design according to the client's
-                      requirements and will have a diverse character. the way we
-                      define the character is as simple as looking at who and
-                      where we will design. From this philosophy we hope to
-                      produce designs that can continue to evolve with the times
-                      and the environment
-                    </p>
+                <Link to={""}>
+                  <div className="item-about a">
+                    <img
+                      className="fit-image"
+                      src="https://iili.io/wlHEBt.jpg"
+                      alt="philosophy-labelassociates"
+                      // style={{ opacity: "0.7" }}
+                    />
+                    <div class="banner-content-about">
+                      <h3>PHILOSOPHY</h3>
+                      <p>
+                        We will do the design according to the client's
+                        requirements and will have a diverse character. the way
+                        we define the character is as simple as looking at who
+                        and where we will design. From this philosophy we hope
+                        to produce designs that can continue to evolve with the
+                        times and the environment
+                      </p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="item-about b">
-                  <img
-                    className="fit-image"
-                    src="https://iili.io/wlH0QI.jpg"
-                    alt="py-house-labelassociates"
-                  />
-                  <div class="banner-content-about">
-                    <h3>ABOUT LABEL</h3>
-                    <p>
-                      Is an architecture and design bureau based in Bandung
-                      City, Indonesia. We provide architectural and interior
-                      design planning on a wide scale covering residential,
-                      commercial and retail. We will design each project through
-                      an analytical process that will help design products
-                      according to the context of the built environment,
-                      resulting in a strong and efficient design solution.
-                    </p>
-                    <p>
-                      We are committed to delivering results with high design
-                      standards, based on appropriate directions from our
-                      clients so that client expectations can be properly met.
-                    </p>
+                </Link>
+                <Link to={""}>
+                  <div className="item-about b">
+                    <img
+                      className="fit-image"
+                      src="https://iili.io/wlH0QI.jpg"
+                      alt="py-house-labelassociates"
+                    />
+                    <div class="banner-content-about">
+                      <h3>ABOUT LABEL</h3>
+                      <p>
+                        Is an architecture and design bureau based in Bandung
+                        City, Indonesia. We provide architectural and interior
+                        design planning on a wide scale covering residential,
+                        commercial and retail. We will design each project
+                        through an analytical process that will help design
+                        products according to the context of the built
+                        environment, resulting in a strong and efficient design
+                        solution.
+                      </p>
+                      <p>
+                        We are committed to delivering results with high design
+                        standards, based on appropriate directions from our
+                        clients so that client expectations can be properly met.
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <Link to={"/team"}>
                   <div className="item-about c">
                     <img

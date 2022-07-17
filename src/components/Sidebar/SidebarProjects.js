@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { Link, NavLink } from "react-router-dom";
 import {
   SIDEDATACOMMERCIAL,
@@ -9,7 +10,7 @@ import {
 import styles from "./SidebarProjects.module.css";
 
 const SidebarProjects = ({ name, collab, type, loc, status, area }) => {
-  console.log(name);
+  const isMobile = useMediaQuery({ query: "(min-width: 780px)" });
 
   const [displayOne, setDisplayOne] = useState(false);
   const [displayTwo, setDisplayTwo] = useState(false);
