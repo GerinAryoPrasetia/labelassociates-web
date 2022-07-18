@@ -9,7 +9,10 @@ import Navbar from "../Navbar/Navbar";
 import { Oval } from "react-loader-spinner";
 import SidebarProjects from "../Sidebar/SidebarProjects";
 import Loading from "../Loading";
+import { useMediaQuery } from "react-responsive";
+import Scroll from "../ScrollToTop/Scroll";
 const SingleProject = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
   const { id } = useParams();
   const [showPopup, setShowPopup] = useState(true);
   const [displayOne, setDisplayOne] = useState(false);
@@ -63,33 +66,43 @@ const SingleProject = () => {
   }
 
   return (
-    <div className="container-projects">
-      <div class="main-content-projects">
-        {found !== undefined ? (
-          <SidebarProjects
-            name={found.name}
-            collab={found.collab_detail}
-            type={found.type_detail}
-            loc={found.location_detail}
-            status={found.status_detail}
-            area={found.area_detail}
-          />
-        ) : (
-          <SidebarProjects />
-        )}
-        <div className="single-wrapper">
-          <ImageGallery
-            items={images}
-            // additionalClass="image-gallery-thumbnails"
-            // lazyLoad={true}
-            showPlayButton={false}
-            slideOnThumbnailOver={true}
-            showFullscreenButton={false}
-          />
+    <>
+      <div className="container-single-projects">
+        <div class="main-content-projects">
+          {found !== undefined ? (
+            <SidebarProjects
+              name={found.name}
+              collab={found.collab_detail}
+              type={found.type_detail}
+              loc={found.location_detail}
+              status={found.status_detail}
+              area={found.area_detail}
+            />
+          ) : (
+            <SidebarProjects />
+          )}
+          <div className={"single-wrapper"}>
+            <ImageGallery
+              items={images}
+              // additionalClass="image-gallery-thumbnails"
+              // lazyLoad={true}
+              showPlayButton={false}
+              slideOnThumbnailOver={true}
+              showFullscreenButton={false}
+            />
+          </div>
         </div>
+        <div className="single-project-mobile">
+          {found.image_url.map((im) => (
+            <div className="image-mobile-wrapper">
+              <img src={im} alt={found.name} />
+            </div>
+          ))}
+        </div>
+        <Navbar type="main" />
       </div>
-      <Navbar type="main" />
-    </div>
+      <Scroll />
+    </>
   );
 };
 

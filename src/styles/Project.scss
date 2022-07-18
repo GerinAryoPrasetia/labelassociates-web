@@ -16,6 +16,17 @@ table {
   //  height: $width / 2.118;
 }
 
+.container-single-projects {
+  width: $width;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 100%;
+  // overflow: hidden;
+  //  height: $width / 2.118;
+}
+
 .layout-grid-projects {
   background-color: blue;
   border-collapse: collapse;
@@ -369,6 +380,7 @@ a:-webkit-any-link {
   //   width: auto !important;
   //   border: $border;
   // margin-left: 270px;
+  display: block;
   max-width: 100%;
   max-height: 100%;
   // display: grid;
@@ -388,9 +400,9 @@ a:-webkit-any-link {
 .image-gallery-slide img {
   width: 100%;
   height: auto;
-  max-height: 80vh;
+  max-height: 84vh !important;
   object-fit: cover;
-  overflow: hidden;
+  overflow: hidden !important;
   object-position: center center;
 }
 
@@ -588,15 +600,24 @@ a:-webkit-any-link {
   }
 }
 
+.hidden-gallery {
+  display: none;
+}
+
+.single-project-mobile {
+  display: none;
+}
+
 // mobile
 
 @media only screen and (max-device-width: 780px) {
-  // .container-projects {
-  //   display: none;
-  // }
-  .container-projects {
+  .single-wrapper {
+    display: none;
+  }
+
+  .container-single-projects {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
   }
 
@@ -710,5 +731,25 @@ a:-webkit-any-link {
     font-size: 24px;
     color: #000;
     font-weight: 400;
+  }
+  // .main-content-projects {
+  //   display: flex;
+  //   flex: 1;
+  // }
+  .single-project-mobile {
+    overflow: scroll;
+    display: block;
+    width: 100%;
+  }
+
+  .image-mobile-wrapper {
+    width: 100%;
+    height: fit-content;
+    margin: 28px 0;
+  }
+
+  .image-mobile-wrapper img {
+    object-fit: contain;
+    width: 100%;
   }
 }

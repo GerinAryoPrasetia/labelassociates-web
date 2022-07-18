@@ -53,12 +53,114 @@ const Contact = () => {
     );
   }
   return (
-    <div className={styles.container_about}>
-      <Navbar />
-      <div className={styles.main_content_about}>
-        <div class={styles.side_container}>
-          <div class={styles.side_content}>
-            {/* <h1>LabelAssociates</h1> */}
+    <>
+      <div className={styles.container_about}>
+        <Navbar />
+        <div className={styles.main_content_about}>
+          <div class={styles.side_container}>
+            <div class={styles.side_content}>
+              {/* <h1>LabelAssociates</h1> */}
+              <NavLink to="/contact-form" style={{ textDecoration: "none" }}>
+                {({ isActive }) => (
+                  <div
+                    onMouseEnter={(e) => showSubMenuOne(e)}
+                    onMouseLeave={(e) => hideSubMenuOne(e)}
+                    className={styles.item_container}
+                  >
+                    <p
+                      className={
+                        isActive ? styles.side_item_active : styles.side_item
+                      }
+                    >
+                      Contact Form
+                    </p>
+                  </div>
+                )}
+              </NavLink>
+              <NavLink to="/contact" style={{ textDecoration: "none" }}>
+                {({ isActive }) => (
+                  <div
+                    className={styles.item_container}
+                    onMouseEnter={(e) => showSubMenuTwo(e)}
+                    onMouseLeave={(e) => hideSubMenuTwo(e)}
+                  >
+                    <p
+                      className={
+                        isActive ? styles.side_item_active : styles.side_item
+                      }
+                    >
+                      Location
+                    </p>
+                  </div>
+                )}
+              </NavLink>
+            </div>
+            <div
+              className={styles.contact_container}
+              style={{ marginTop: "50px" }}
+            >
+              <div className={styles.contact_content}>
+                <FaPhoneAlt />
+                <span>(022) 20515404</span>
+              </div>
+              <div className={styles.contact_content}>
+                <FaInstagram />
+                <span>@label.associates</span>
+              </div>
+              <div className={styles.contact_content}>
+                <FaRegEnvelope />
+                <span>label.assoc@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          {/* Content */}
+          {/* <div className={styles.container_content_about}> */}
+          <Map
+            mapboxAccessToken="pk.eyJ1IjoiZ2VyaW5hcnlvIiwiYSI6ImNsNTlzeHV1MDAyb2EzZW8xMmVzbHVuem4ifQ.Uz7f43R-FFlsXt_vxgdGwg"
+            initialViewState={{
+              longitude: 107.66181141924545,
+              latitude: -6.916480182803706,
+              zoom: 14.5,
+            }}
+            style={{
+              width: "100%",
+              height: "100%",
+              marginLeft: "270px",
+              marginBottom: "70px",
+              overflow: "hidden",
+            }}
+            mapStyle="mapbox://styles/mapbox/dark-v10"
+          >
+            {showPopup && (
+              <Popup
+                longitude={107.66181141924545}
+                latitude={-6.916480182803706}
+                anchor="bottom"
+                onClose={() => setShowPopup(false)}
+              >
+                Jl. Kuningan Raya No. 53
+              </Popup>
+            )}
+            <Marker
+              longitude={107.66181141924545}
+              latitude={-6.916480182803706}
+              anchor="center"
+            >
+              <div>
+                <img
+                  src="https://iili.io/jlXAXI.png"
+                  alt=""
+                  style={{ width: "20px" }}
+                />
+              </div>
+            </Marker>
+          </Map>
+        </div>
+      </div>
+      <div className={styles.container_contact_mobile}>
+        <Navbar />
+        <div className={styles.container_top_contact}>
+          <div className={styles.container_link}>
             <NavLink to="/contact-form" style={{ textDecoration: "none" }}>
               {({ isActive }) => (
                 <div
@@ -94,10 +196,7 @@ const Contact = () => {
               )}
             </NavLink>
           </div>
-          <div
-            className={styles.contact_container}
-            style={{ marginTop: "50px" }}
-          >
+          <div>
             <div className={styles.contact_content}>
               <FaPhoneAlt />
               <span>(022) 20515404</span>
@@ -112,50 +211,48 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        {/* Content */}
-        {/* <div className={styles.container_content_about}> */}
-        <Map
-          mapboxAccessToken="pk.eyJ1IjoiZ2VyaW5hcnlvIiwiYSI6ImNsNTlzeHV1MDAyb2EzZW8xMmVzbHVuem4ifQ.Uz7f43R-FFlsXt_vxgdGwg"
-          initialViewState={{
-            longitude: 107.66181141924545,
-            latitude: -6.916480182803706,
-            zoom: 14.5,
-          }}
-          style={{
-            width: "100%",
-            height: "100%",
-            marginLeft: "270px",
-            marginBottom: "70px",
-            overflow: "hidden",
-          }}
-          mapStyle="mapbox://styles/mapbox/dark-v10"
-        >
-          {showPopup && (
-            <Popup
+        <div>
+          <Map
+            mapboxAccessToken="pk.eyJ1IjoiZ2VyaW5hcnlvIiwiYSI6ImNsNTlzeHV1MDAyb2EzZW8xMmVzbHVuem4ifQ.Uz7f43R-FFlsXt_vxgdGwg"
+            initialViewState={{
+              longitude: 107.66181141924545,
+              latitude: -6.916480182803706,
+              zoom: 14.5,
+            }}
+            style={{
+              width: "100%",
+              height: "90vh",
+              overflow: "visible",
+            }}
+            mapStyle="mapbox://styles/mapbox/dark-v10"
+          >
+            {showPopup && (
+              <Popup
+                longitude={107.66181141924545}
+                latitude={-6.916480182803706}
+                anchor="bottom"
+                onClose={() => setShowPopup(false)}
+              >
+                Jl. Kuningan Raya No. 53
+              </Popup>
+            )}
+            <Marker
               longitude={107.66181141924545}
               latitude={-6.916480182803706}
-              anchor="bottom"
-              onClose={() => setShowPopup(false)}
+              anchor="center"
             >
-              Jl. Kuningan Raya No. 53
-            </Popup>
-          )}
-          <Marker
-            longitude={107.66181141924545}
-            latitude={-6.916480182803706}
-            anchor="center"
-          >
-            <div>
-              <img
-                src="https://iili.io/jlXAXI.png"
-                alt=""
-                style={{ width: "20px" }}
-              />
-            </div>
-          </Marker>
-        </Map>
+              <div>
+                <img
+                  src="https://iili.io/jlXAXI.png"
+                  alt=""
+                  style={{ width: "20px" }}
+                />
+              </div>
+            </Marker>
+          </Map>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
