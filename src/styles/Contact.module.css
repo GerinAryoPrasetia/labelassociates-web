@@ -316,4 +316,8 @@ textarea {
     margin: auto;
     width: 80%;
   }
+
+  .item_container p {
+    font-size: 16px;
+  }
 }
