@@ -134,12 +134,12 @@ span:not(.detail_content) {
     background-color: #fff;
     /* z-index: 999; */
     position: relative;
-    text-align: left;
+    text-align: right;
     font-size: 16px;
     transition: all 1s ease-in;
     top: 0;
     left: 0;
-    margin-left: 60px;
+    margin-right: 60px;
   }
 
   .detail_container p:not(.detail_content),
